@@ -16,6 +16,9 @@ touch somefile.txt
 git status
 git add .   # add all files to the staging area, we can give individual file names as well in place of .
 git commit -m "some txt msg"   # -m is for some msg
+
+** Note - need to do git add . before every commit
+
 git restore --staged names.txt  #Remove from stage without committing it
 git log
 git reset commit_id  #all successive commits mader after this commit_id will be reset means file will go back to the state of this commit_id
@@ -24,7 +27,69 @@ git stash   	# imp cmd - when u don't want to commit but keep ur changes
 git stash pop 	#to bring back all the files from stash 
 git stash clear 	#when u n o longer want those changes that u kept with git stash
 
-## Note - need to do git add . before every commit
+## After creating a remote repo on GitHub , connect that remote repo to local repo with below command -
+
+git remote add origin https://github.com/prash-mish/2024.git   # origin is a name given by convention to our remote repo url
+
+## Pushing local changes to remote repo
+
+git push origin master  
+
+# In some cases force push is needed - git push origin master -f 
+
+#origin is the name we have given to the remote repo url in prev command, master is the branch name in which we are pushing the changes - if master is not there bcoz git by default crates main branch, it will create a branch named master
+
+**fork means copy a project in our own github account
+
+**clone means download that project in ur local repo to make changes etc.
+
+git branch branch_name # to create a new branch
+git checkout branch_name # HEAD will point to this branch means whatever commits you will make will be made into this new branch now
+
+git fetch --all --prune  # get all the latest changes including the deleted ones (prune is used for this)
+
+***
+
+git reset --hard upstream/main
+
+OR -> git pull upstream main  #whenever u want to pull someone changes from main . Note upstream means the source repo
+
+******
+
+## rebase - merge mulitple commits into one : pick & squash.
+
+## for eg. if there are 4 commits & u run below command then in interactive mode a file will open on console where we can pick & squash commits.
+
+## if we want to squash commit 2 & 3 means they will be merged into commit 1 and that commit_id_1 will be used in rebase command.
+
+git rebase -i commit_id_1   ##
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
