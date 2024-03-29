@@ -1,0 +1,36 @@
+# open any folder in Git -> right click & open gitbash here. it will make a .git repo (hidden folder) inside our folder.
+
+# all linux like commands will mostly work in the Git console - for rg, touch somefile.txt -> will make a new empty txt file in our folder.
+
+#
+
+
+
+**************************************************************
+
+commands -
+=========
+
+git init
+touch somefile.txt
+git status
+git add .   # add all files to the staging area, we can give individual file names as well in place of .
+git commit -m "some txt msg"   # -m is for some msg
+git restore --staged names.txt  #Remove from stage without committing it
+git log
+git reset commit_id  #all successive commits mader after this commit_id will be reset means file will go back to the state of this commit_id
+
+git stash   	# imp cmd - when u don't want to commit but keep ur changes
+git stash pop 	#to bring back all the files from stash 
+git stash clear 	#when u n o longer want those changes that u kept with git stash
+
+## Note - need to do git add . before every commit
+
+
+
+
+
+
+
+
+
